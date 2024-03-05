@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html style="height: 100%;">
+<head>
+    <title>Vehicle Data Heatmap</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        #mapFrame {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        #buttonPanel {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 2000;
+        }
+    </style>
+</head>
+<body>
+    <div id="buttonPanel">
+        <button onclick="loadMap('heatmap_all.html')">Overview</button>
+        <button onclick="loadMap('heatmap_14A.html')">14A</button>
+        <button onclick="loadMap('heatmap_38A.html')">38A</button>
+        <button onclick="loadMap('heatmap_46.html')">46</button>
+        <button onclick="loadMap('heatmap_47.html')">47</button>
+        <button onclick="loadMap('heatmap_51.html')">51</button>
+    </div>
+
+    <iframe id="mapFrame"></iframe>
+
+    <script>
+        function loadMap(filename) {
+            document.getElementById('mapFrame').src = filename;
+        }
+    </script>
+</body>
+</html>
