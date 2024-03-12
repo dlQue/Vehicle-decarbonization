@@ -23,7 +23,7 @@
 </head>
 <body>
     <div id="buttonPanel">
-        <button onclick="loadMap('heatmap_all.html')">Overview</button>
+        <button onclick="loadMap('heatmap_all_with_legend.html')">Overview</button>
         <button onclick="loadMap('heatmap_14A.html')">14A</button>
         <button onclick="loadMap('heatmap_38A.html')">38A</button>
         <button onclick="loadMap('heatmap_46.html')">46</button>
@@ -31,7 +31,8 @@
         <button onclick="loadMap('heatmap_51.html')">51</button>
     </div>
 
-    <iframe id="mapFrame"></iframe>
+    <!-- Set the src attribute to heatmap_all_with_legend.html to load it by default -->
+    <iframe id="mapFrame" src="heatmap_all_with_legend.html"></iframe>
 
     <script>
         function loadMap(filename) {
